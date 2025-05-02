@@ -33,7 +33,9 @@ app.use( (req, res) => {
     res.status(404).send({mensaje: 'ruta no encotrada'});
 });
 
-app.listen(PORT, () => {
+//Importante: Para levantar el servidor en render es necesario configurar el puerto http al que render va a escuchar
+//En este caso es 
+app.listen(PORT, '0.0.0.0',() => {
     console.log(`servidor levantado en el puerto: ${PORT}, desde el servidor`);
 })  
 
